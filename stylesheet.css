@@ -1,0 +1,366 @@
+/* Default styles for all screen sizes */
+:root {
+    --primary-color: #007d7b;
+    --black: #000000;
+    --white: #ffffff;
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    height: 100%;
+    margin: 0;
+    display:flex;
+    justify-content: center;                /* Content was centered */
+   
+ 
+}
+body {
+    /* display: flex; */
+    width: 1300px;
+    background-color: var(--black);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Global Styles */
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.25em;
+}
+/* End Global Styles */
+
+
+
+/* Header CSS */
+header {
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 0px;
+    margin: 0 40px 0 40px;                  /* top right bottom left */
+}
+
+header h1 {
+    margin: 0 0px 0 0px;                    /* top right bottom left */
+    text-align: left;
+}
+/* End Header CSS */
+
+
+
+
+/* Navigation CSS */
+nav {
+    margin: 0 40px 0 40px;                  /* top right bottom left */  
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 10px 0px 10px 0px;              /* top right bottom left */
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;              /* Aligns to the right */
+}
+
+nav li {
+    padding: 10px;                          /* Spaces nav links */
+}
+
+nav a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #fff;
+}
+/* End Navigation CSS */
+
+
+
+
+/* About Section CSS */
+#about h2 {
+    color: var(--black);                    
+    background-color: var(--white);
+    margin: 0 40px 0 40px;                  /* top right bottom left. */
+    text-align: center;
+    padding: 20px 0px 20px 0px;             
+}
+
+#about p {
+    text-align: left;
+    padding: 20px 0px 20px 0px;             /* top right bottom left. */ 
+    color: var(--black);                    
+    background-color: var(--white);
+    margin: 0 40px 0 40px;                  
+    padding: 0px 10px 0px 10px;              
+}
+
+#about p:nth-of-type(1) {
+    padding-bottom: 20px;
+}
+/* End About Section CSS */
+
+
+
+/* Gallery Section CSS */
+#gallery-heading h2 {
+    color: var(--black);                    
+    background-color: var(--white);
+    margin: 0 40px 0 40px;                  /* top right bottom left. */
+    text-align: center;
+    padding: 20px 0px 20px 0px;            
+}
+
+#gallery-heading p {
+    text-align: left;
+    padding: 20px 0px 20px 0px;             /* top right bottom left. */ 
+    color: var(--black);                    
+    background-color: var(--white);
+    margin: 0 40px 0 40px;                  
+    padding-left: 10px;
+}
+
+
+#gallery {
+    background-color: var(--white);
+    margin: 0 40px 0 40px;                  /* top right bottom left */
+    padding: 0 10px 0 10px;                 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Three columns. */
+    grid-gap: 10px;                         /* The gap between items. */
+    position: relative; 
+}
+
+figure {
+    position: relative;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+figcaption.top {
+    top: 0;
+    bottom: auto;
+}
+
+figcaption.bottom {
+    top: auto;
+    bottom: 0;
+}
+
+/* Set colors for figcaptions. */
+figcaption.white {
+    color: #fff;
+    
+}
+
+figcaption.black {
+    color: #000;
+    
+}
+/* End Gallery Section CSS. */
+
+
+
+
+/* The Contact CSS. */
+#contact h2, p {
+    text-align: center;                     /* Centers the Contact Heading and Paragraph. */
+    color: var(--white);
+}
+
+form {
+    max-width: 75%;                         /* The maximum width of the form. */
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--white);
+    font-family: Helvetica, sans-serif;  
+    text-align: left;                       /* moved Form Labels left. */
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-family: var(--font-family);        
+    color: var(--primary-color);                          
+}
+
+form input::placeholder,                    /* Pseudo-Element Selector. */
+form textarea::placeholder {                
+    color: var(--primary-color);                          
+    font-family: var(--font-family);        
+    font-size: 14px;    
+    text-align: left;                       /* Moved all placeholders left in the form. */ 
+    line-height: 2;                         /* Centered placeholder text vertically inside the forms. */        
+}
+
+label, input {
+    font-size: 1em;
+    text-align: center;
+    margin-top: 5px;
+    color: var(--primary-color);  
+}
+
+button {                                    /* The 'Submit' Button. */
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px;
+    width: 50%;
+    border-radius: 50px;                    /* For the desired roundness. */
+    cursor: pointer;
+    display: block;                         /* Ensures that the button is a block-level element. */
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* End Contact CSS. */
+
+
+
+
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    margin: 60px 0px 60px 0px;              /* top right bottom left. */
+}
+
+
+
+
+
+
+
+
+/* Breakpoint for screens of 380px or smaller SMALLEST SCREENS Decent down to 275px */
+
+@media screen and (max-width: 380px) {
+
+    body {
+        width: 100%;
+    }
+
+    header h1 {
+        margin: 0 ;                             /* top right bottom left */
+        text-align: center;
+        font-size: .75em !important;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 10px 0px 10px 0px;              /* top right bottom left */
+        padding: 0;
+        display: flex;
+        justify-content: center;                /* Aligns to the right */
+        font-size: .75em;
+    }
+
+    #gallery {
+        grid-template-columns: 1fr;             /* One column for smaller screens. */
+    }
+  
+}
+
+/* Breakpoint for screens of 485px or smaller SMALL SCREENS */
+
+@media screen and (max-width: 485px) {
+
+    body {
+        width: 100%;
+    }
+
+    header h1 {
+        margin: 0 ;                             /* top right bottom left */
+        text-align: center;
+        font-size: 2em;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 10px 0px 10px 0px;              /* top right bottom left */
+        padding: 0;
+        display: flex;
+        justify-content: center;                /* Aligns to the right */
+    }
+
+    #gallery {
+        grid-template-columns: 1fr;             /* One column for smaller screens. */
+    }
+  
+}
+
+/* Breakpoint for screens between 485px and 880px MEDIUM SCREENS */
+
+@media screen and (min-width: 485px) and (max-width: 880px) {
+
+    body {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 10px 0px 10px 0px;                 /* top right bottom left */
+        padding: 0;
+        display: flex;
+        justify-content: center;                   /* Aligns to the right */
+    }
+
+    #gallery {
+            background-color: var(--white);
+            margin: 0 40px 0 40px;                 /* top right bottom left */
+            padding: 0 10px 0 10px;                 
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Three columns. */
+            grid-gap: 10px;                        /* The gap between items. */
+            position: relative; 
+            width: auto;
+    }
+
+    #gallery, form {
+        max-width: 90%;                            /* Width for medium-sized screens. */
+    }
+}
+
+/* Breakpoint for screens between 880px and 1300px */
+
+@media screen and (min-width: 880px) and (max-width: 1300px) {
+
+    body {
+        width: 100%;
+    }
+
+    #gallery, body {
+        width: auto;                               /* Using auto keeps the gallery size consistent with the about section and header */
+    }
+}
